@@ -1,0 +1,9 @@
+{
+    "watch": ["src"],
+    "ext": "ts js json",
+    "ignore": [
+      "src/**/*.+(spec|test).+(ts|js)"
+    ],
+    "exec": "node --max-http-header-size=15360 -r ts-node/register src/index.ts"
+  }
+  
