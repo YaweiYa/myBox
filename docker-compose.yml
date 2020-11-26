@@ -1,0 +1,16 @@
+version: "3.8"
+services:
+  my-box-db:
+    image: postgres:13.1
+    restart: always
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=password10
+      - POSTGRES_DB=myBox
+    volumes:
+      - db-cache:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+
+volumes:
+  db-cache:
