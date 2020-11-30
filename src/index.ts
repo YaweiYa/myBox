@@ -1,7 +1,7 @@
-import express, {Express} from 'express'
-import router from './routes'
+import express, { Express } from 'express'
+import router from './routers'
 
-const app: Express = express()
+export const app: Express = express()
 
 const port: number = 8080
 
