@@ -4,10 +4,11 @@
   "main": "dist/index.js",
   "license": "MIT",
   "scripts": {
-    "lint-fix": "tslint -c tslint.json -p tsconfig.json --fix",
+    "lint": "eslint . --ext .ts",
+    "lint-fix": "eslint . --ext .ts --fix",
     "compile": "tsc",
     "start": "nodemon",
-    "test": "jest --coverage"
+    "test": "yarn lint && jest --coverage"
   },
   "dependencies": {
     "@types/express": "^4.17.9",

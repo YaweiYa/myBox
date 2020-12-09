@@ -4,9 +4,9 @@ import { cabinetHandler } from '../handlers/cabinetHandler'
 
 const router = express.Router()
 
-router.get('/diagnostic/heartbeat', (req, res, next) => { res.send('OK') })
+router.get('/diagnostic/heartbeat', (_, res) => { res.send('OK') })
 
-router.get('/welcome', (req, res) => { res.send('Welcome to MyBox!') })
+router.get('/welcome', (_, res) => { res.send('Welcome to MyBox!') })
 
 router.post('/cabinets', bodyParser.json(), cabinetHandler)
 

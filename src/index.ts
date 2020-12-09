@@ -3,7 +3,7 @@ import router from './routers'
 
 export const app: Express = express()
 
-const port: number = 8080
+const port = 8080
 
 app.use(router)
 
